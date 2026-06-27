@@ -1,8 +1,6 @@
-# Menggunakan image base Nginx yang ringan berbasis Alpine Linux
 FROM nginx:alpine
 
-# Menyalin file index.html dari repository ke dalam folder web server Nginx
-COPY index.html /usr/share/nginx/html/index.html
+# Menyalin seluruh file di repository (termasuk index.html & style.css) ke folder Nginx
+COPY . /usr/share/nginx/html/
 
-# Membuka port 80 di dalam container
 EXPOSE 80
