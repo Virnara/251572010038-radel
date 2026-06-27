@@ -4,5 +4,6 @@ services:
   web-profil:
     build: .
     container_name: web_profil_container
+    restart: always
     ports:
       - "8181:80"
