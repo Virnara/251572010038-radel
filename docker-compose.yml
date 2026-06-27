@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  web-profil:
+    build: .
+    container_name: web_profil_container
+    ports:
+      - "8181:80"
