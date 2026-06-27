@@ -1,119 +1,142 @@
-/* --- TEMA CYBERPUNK ANIME --- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* --- MANHWA SYSTEM WINDOW THEME --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
 
 body { 
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-    background-color: #0a0b10; 
+    font-family: 'Segoe UI', Monaco, Consolas, 'Courier New', monospace; 
+    background-color: #030712; 
+    /* Efek garis kisi-kisi samar (grid background) khas layar sistem */
     background-image: 
-        linear-gradient(rgba(10, 11, 16, 0.85), rgba(10, 11, 16, 0.9)),
-        radial-gradient(#00f2fe 1px, transparent 0);
-    background-size: 100% 100%, 30px 30px;
-    color: #e2e8f0; 
-    line-height: 1.8; 
-    padding: 40px 20px; 
+        linear-gradient(rgba(31, 41, 55, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31, 41, 55, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: #f3f4f6; 
+    line-height: 1.7; 
+    padding: 50px 20px; 
 }
 
-/* Bingkai Utama Aplikasi */
+/* Status Window (Kotak Utama) */
 .container { 
-    max-width: 850px; 
+    max-width: 800px; 
     margin: 0 auto; 
-    background: #12131a; 
+    /* Efek Kaca Transparan Melayang (Glassmorphism) */
+    background: rgba(17, 24, 39, 0.85); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 40px; 
-    border-radius: 8px; 
-    box-shadow: 0 0 20px rgba(0, 242, 254, 0.15); 
-    border: 2px solid #00f2fe; 
+    border-radius: 12px; 
+    /* Glow tipis warna biru langit khas jendela status manhwa */
+    border: 2px solid #00d2ff; 
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.25), inset 0 0 15px rgba(0, 210, 255, 0.1);
     position: relative; 
-    overflow: hidden;
 }
 
-/* Ornamen Efek Cahaya Neon di Sudut */
+/* Indikator Sudut Layar Sistem */
 .container::before { 
-    content: "SYSTEM: ACTIVE"; 
+    content: "[ STATUS WINDOW ]"; 
     position: absolute; 
-    top: 10px; 
-    right: 15px; 
-    font-size: 0.75rem; 
-    color: #ff007f; 
-    font-family: monospace; 
+    top: -12px; 
+    left: 30px; 
+    background: #030712;
+    padding: 0 12px;
+    font-size: 0.85rem; 
+    color: #00d2ff; 
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
-/* Header Profil ala Mecha Anime */
+/* Header Profil */
 .profile-header { 
     text-align: center; 
-    margin-bottom: 40px; 
-    border-bottom: 2px dashed #ff007f; 
-    padding-bottom: 20px; 
+    margin-bottom: 35px; 
+    border-bottom: 1px solid rgba(0, 210, 255, 0.3); 
+    padding-bottom: 25px; 
 }
 .profile-header h1 { 
-    color: #00f2fe; 
-    font-size: 2.5rem; 
+    color: #ffffff; 
+    font-size: 2.3rem; 
     font-weight: 800; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+    letter-spacing: 3px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
 }
 .profile-header p { 
-    color: #ff007f; 
-    font-size: 1rem; 
-    font-weight: bold; 
-    margin-top: 5px; 
-    letter-spacing: 3px;
-    text-shadow: 0 0 8px rgba(ff, 0, 127, 0.5);
+    color: #00d2ff; 
+    font-size: 0.9rem; 
+    font-weight: 600; 
+    margin-top: 8px; 
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
-/* Kotak Konten Kontainer */
+/* Kotak Quest / Skill / Kategori (Section Box) */
 .section-box { 
-    background: #181a24; 
+    background: rgba(31, 41, 55, 0.4); 
     padding: 25px; 
-    border-radius: 6px; 
+    border-radius: 8px; 
     margin-bottom: 25px; 
-    border: 1px solid #23263a; 
-    border-left: 5px solid #ff007f; 
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    border: 1px solid rgba(0, 210, 255, 0.2); 
+    transition: all 0.25s ease-in-out; 
 }
+
+/* Efek ketika kursor menyorot kotak sistem */
 .section-box:hover { 
-    border-left-color: #00f2fe;
-    transform: translateX(5px);
-    box-shadow: -5px 0 15px rgba(0, 242, 254, 0.2);
+    background: rgba(31, 41, 55, 0.6);
+    border-color: #00d2ff;
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
 }
+
+/* Judul Section ala Notifikasi Quest */
 h2 { 
-    color: #00f2fe; 
-    font-size: 1.3rem; 
+    color: #00d2ff; 
+    font-size: 1.25rem; 
     margin-bottom: 15px; 
     font-weight: 700; 
     letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
-/* Grid Bagian Identitas Diri */
+/* Identitas Status (Grid List) */
 .identity-list { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
     gap: 15px; 
     list-style: none; 
 }
 .identity-list li { 
-    background: #12131a; 
-    padding: 12px 15px; 
-    border-radius: 4px; 
-    border: 1px solid #23263a; 
+    background: rgba(17, 24, 39, 0.6); 
+    padding: 14px 18px; 
+    border-radius: 6px; 
+    border-left: 3px solid #00d2ff;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .identity-list strong { 
-    color: #ff007f; 
+    color: #9ca3af; 
     display: block; 
-    font-size: 0.8rem; 
+    font-size: 0.75rem; 
     text-transform: uppercase; 
-    letter-spacing: 1px; 
+    letter-spacing: 1.5px; 
+    margin-bottom: 4px;
 }
 .identity-list span { 
     color: #ffffff; 
-    font-weight: 600; 
-    font-size: 1.05rem; 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
-/* Format Paragraf */
+/* Deskripsi Teks / Narasi Quest */
 p { 
-    color: #94a3b8; 
+    color: #d1d5db; 
     text-align: justify; 
     font-size: 0.95rem; 
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 0.3px;
 }
