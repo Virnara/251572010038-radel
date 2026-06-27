@@ -1,0 +1,21 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Georgia', 'Times New Roman', serif; background: #1a0f0f; color: #e2d4c9; line-height: 1.8; padding: 40px 20px; }
+.container { max-width: 850px; margin: 0 auto; background: #2a1818; padding: 40px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 2px solid #b32424; position: relative; }
+
+.container::before { content: "🏮"; position: absolute; top: 15px; left: 15px; font-size: 1.5rem; }
+.container::after { content: "🏮"; position: absolute; top: 15px; right: 15px; font-size: 1.5rem; }
+
+.profile-header { text-align: center; margin-bottom: 40px; border-bottom: 3px double #d4af37; padding-bottom: 20px; }
+.profile-header h1 { color: #d4af37; font-size: 2.4rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
+.profile-header p { color: #e63946; font-size: 1.1rem; font-weight: bold; margin-top: 5px; letter-spacing: 2px; }
+
+.section-box { background: #1f1111; padding: 25px; border-radius: 4px; margin-bottom: 25px; border: 1px solid #4a2828; border-top: 4px solid #b32424; transition: all 0.3s ease; }
+.section-box:hover { border-top-color: #d4af37; background: #241414; }
+h2 { color: #d4af37; font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; font-weight: bold; }
+
+.identity-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; list-style: none; }
+.identity-list li { background: #2a1818; padding: 12px 15px; border-radius: 4px; border: 1px solid #b32424; }
+.identity-list strong { color: #d4af37; display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+.identity-list span { color: #f5effa; font-weight: 600; font-size: 1.05rem; }
+
+p { color: #c4b5a9; text-align: justify; font-size: 1.05rem; }
