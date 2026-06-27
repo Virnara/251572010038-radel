@@ -1,21 +1,119 @@
+/* --- TEMA CYBERPUNK ANIME --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Georgia', 'Times New Roman', serif; background: #1a0f0f; color: #e2d4c9; line-height: 1.8; padding: 40px 20px; }
-.container { max-width: 850px; margin: 0 auto; background: #2a1818; padding: 40px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 2px solid #b32424; position: relative; }
 
-.container::before { content: "🏮"; position: absolute; top: 15px; left: 15px; font-size: 1.5rem; }
-.container::after { content: "🏮"; position: absolute; top: 15px; right: 15px; font-size: 1.5rem; }
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background-color: #0a0b10; 
+    background-image: 
+        linear-gradient(rgba(10, 11, 16, 0.85), rgba(10, 11, 16, 0.9)),
+        radial-gradient(#00f2fe 1px, transparent 0);
+    background-size: 100% 100%, 30px 30px;
+    color: #e2e8f0; 
+    line-height: 1.8; 
+    padding: 40px 20px; 
+}
 
-.profile-header { text-align: center; margin-bottom: 40px; border-bottom: 3px double #d4af37; padding-bottom: 20px; }
-.profile-header h1 { color: #d4af37; font-size: 2.4rem; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; }
-.profile-header p { color: #e63946; font-size: 1.1rem; font-weight: bold; margin-top: 5px; letter-spacing: 2px; }
+/* Bingkai Utama Aplikasi */
+.container { 
+    max-width: 850px; 
+    margin: 0 auto; 
+    background: #12131a; 
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.15); 
+    border: 2px solid #00f2fe; 
+    position: relative; 
+    overflow: hidden;
+}
 
-.section-box { background: #1f1111; padding: 25px; border-radius: 4px; margin-bottom: 25px; border: 1px solid #4a2828; border-top: 4px solid #b32424; transition: all 0.3s ease; }
-.section-box:hover { border-top-color: #d4af37; background: #241414; }
-h2 { color: #d4af37; font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center; font-weight: bold; }
+/* Ornamen Efek Cahaya Neon di Sudut */
+.container::before { 
+    content: "SYSTEM: ACTIVE"; 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 0.75rem; 
+    color: #ff007f; 
+    font-family: monospace; 
+    letter-spacing: 2px;
+}
 
-.identity-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; list-style: none; }
-.identity-list li { background: #2a1818; padding: 12px 15px; border-radius: 4px; border: 1px solid #b32424; }
-.identity-list strong { color: #d4af37; display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
-.identity-list span { color: #f5effa; font-weight: 600; font-size: 1.05rem; }
+/* Header Profil ala Mecha Anime */
+.profile-header { 
+    text-align: center; 
+    margin-bottom: 40px; 
+    border-bottom: 2px dashed #ff007f; 
+    padding-bottom: 20px; 
+}
+.profile-header h1 { 
+    color: #00f2fe; 
+    font-size: 2.5rem; 
+    font-weight: 800; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+}
+.profile-header p { 
+    color: #ff007f; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    margin-top: 5px; 
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(ff, 0, 127, 0.5);
+}
 
-p { color: #c4b5a9; text-align: justify; font-size: 1.05rem; }
+/* Kotak Konten Kontainer */
+.section-box { 
+    background: #181a24; 
+    padding: 25px; 
+    border-radius: 6px; 
+    margin-bottom: 25px; 
+    border: 1px solid #23263a; 
+    border-left: 5px solid #ff007f; 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+.section-box:hover { 
+    border-left-color: #00f2fe;
+    transform: translateX(5px);
+    box-shadow: -5px 0 15px rgba(0, 242, 254, 0.2);
+}
+h2 { 
+    color: #00f2fe; 
+    font-size: 1.3rem; 
+    margin-bottom: 15px; 
+    font-weight: 700; 
+    letter-spacing: 1px;
+}
+
+/* Grid Bagian Identitas Diri */
+.identity-list { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px; 
+    list-style: none; 
+}
+.identity-list li { 
+    background: #12131a; 
+    padding: 12px 15px; 
+    border-radius: 4px; 
+    border: 1px solid #23263a; 
+}
+.identity-list strong { 
+    color: #ff007f; 
+    display: block; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+.identity-list span { 
+    color: #ffffff; 
+    font-weight: 600; 
+    font-size: 1.05rem; 
+}
+
+/* Format Paragraf */
+p { 
+    color: #94a3b8; 
+    text-align: justify; 
+    font-size: 0.95rem; 
+}
